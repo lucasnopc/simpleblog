@@ -1,6 +1,6 @@
 import Head from 'next/head'
+import CategoryPosts from '../components/category'
 import Layout from '../components/layout'
-import Post from '../components/post'
 import getAllPosts from '../scripts/getAllPosts'
 
 
@@ -31,17 +31,7 @@ export default function Home({ posts }) {
       <Layout>
         <div className='flex flex-col'>
           {categories.map(cat => {
-            return <div key={cat.category} className='pb-5'>
-              <h2 className='font-bold text-2xl pb-2'>{cat.category}</h2>
-              <div className='flex'>
-              {cat.post.map(p => {
-              console.log(p)
-                return <div key={p.slug} className='inline-block'>
-                  <Post post={p} />
-                </div>
-              })}
-              </div>
-            </div>
+            return <CategoryPosts key={cat.category} cat={cat} />
           }
           )}
         </div>
