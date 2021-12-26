@@ -1,8 +1,8 @@
 ---
 title: 'python'
 cover_image: '/posts/python.png'
-torrent_link: 'magnet:'
 destription: 'Curso de python'
+category: 'Programação'
 ---
 ## python python
 

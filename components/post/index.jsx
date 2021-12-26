@@ -6,7 +6,7 @@ export default function Post({ post }) {
 
     <Link href={`/posts/${post.slug}`}>
       <a>
-        <Image width={100} height={200} src={post.frontmatter.cover_image} alt="Post" />
+        <Image width={250} height={150} className="scale-90" src={post.frontmatter.cover_image} alt="Post" />
         <h2 className="uppercase font-semibold text-sm">{post.frontmatter.title}</h2>
       </a>
     </Link>

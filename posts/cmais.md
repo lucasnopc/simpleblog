@@ -1,8 +1,9 @@
 ---
 title: 'C++'
 cover_image: '/posts/cmaismais.jpg'
-torrent_link: 'magnet:'
 destription: 'Curso de programação'
+category: 'Programação'
+
 ---
 ## Hello World
 

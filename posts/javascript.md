@@ -1,8 +1,9 @@
 ---
 title: 'Javascript'
 cover_image: '/posts/javascript.png'
-torrent_link: 'magnet:'
 destription: 'Curso de Javascript'
+category: 'Programação'
+
 ---
 ## Hello Javascript
 
