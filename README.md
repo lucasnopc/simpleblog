@@ -7,4 +7,4 @@ npm run dev
 yarn dev
 ```
 
-Preview [vercel preview](http://localhost:3000) 
+Preview [vercel preview](https://simpleblog-jet.vercel.app/) 
