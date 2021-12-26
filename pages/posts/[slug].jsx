@@ -5,9 +5,15 @@ import { marked } from 'marked'
 import Layout from '../../components/layout'
 import Image from 'next/image'
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 
 export default function PostPage(props) {
-  // console.log(props)
+  const [windowWidth, setWindowWidth] = useState(0)
+  const [windowHeigth, setWindowHeigth] = useState(0)
+  useEffect(() => {
+    setWindowWidth(window.innerWidth)
+    setWindowHeigth(window.innerHeight)
+  }, [])
   return <>
     <Head>
       <title>{props.frontmatter.title}</title>
@@ -15,11 +21,14 @@ export default function PostPage(props) {
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Layout>
-
-      <h1>{props.frontmatter.title}</h1>
-      <Image width={150} height={150} alt="props.slug" src={props.frontmatter.cover_image} />
-      <p>{props.frontmatter.description}</p>
-      <div dangerouslySetInnerHTML={{ __html: marked(props.content) }}></div>
+      <div className=''>
+        <Image width={windowWidth} height={windowHeigth / 2} alt="props.slug" src={props.frontmatter.cover_image} />
+        <div className='w-4/5 mx-auto bg-black -translate-y-20 p-3 rounded-lg'>
+          <h1 className="text-2xl text-bold">{props.frontmatter.title}</h1>
+          <p>{props.frontmatter.description}</p>
+          <div dangerouslySetInnerHTML={{ __html: marked(props.content) }}></div>
+        </div>
+      </div>
     </Layout></>
 }
 
